@@ -35,30 +35,4 @@ Route::name('user.')->group(function () {
     });
 
     Route::get('/', [HomeController::class, 'index'])->name('home');
-
-    Route::get('@{username}', [ProfileController::class, 'index'])->name('profile');
-
-    Route::middleware('auth', 'user.active')->group(function () {
-
-        Route::controller(ProfileController::class)
-            ->name('profile.')
-            ->group(function () {
-                Route::get('update',  'show')->name('show');
-                Route::post('update',  'update')->name('update');
-                Route::post('delete-cv',  'deleteExistingCV')->name('delete_cv');
-            });
-
-        Route::post('logout', [LogoutController::class, 'logout'])->name('logout');
-    });
-
-    Route::prefix('challenges')
-        ->controller(ChallengeController::class)
-        ->name('challenges.')
-        ->group(function () {
-            Route::get('{challenge:slug}', 'index')->name('index');
-            Route::post('{challenge:slug}/submit', 'submit')->name('submit')->middleware('auth', 'user.active');
-        });
-
-    // Route::get(' /{company:slug}', [CompanyController::class, 'index'])->name('company.index');
-    // Route::get('companies/{company:slug}/challenges', [CompanyController::class, 'challenges'])->name('company.challenges');
 });
