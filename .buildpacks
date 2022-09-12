@@ -1,3 +1,2 @@
 https://github.com/heroku/heroku-buildpack-php
-https://github.com/heroku/heroku-bheroku plugins:install buildpack-registry
-uildpack-nodejs
+https://github.com/heroku/heroku-buildpack-nodejs
