@@ -29,9 +29,6 @@ class ProfileController extends Controller
             'email' => $request->email,
             'password' => $request->password,
             'image' => $image_name ?? restaurant()->image,
-            'city' => $request->city,
-            'website' => $request->website,
-            'bio' => $request->bio,
         ]);
 
         return back()->with('status', 'Your profile has been updated successfully.');

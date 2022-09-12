@@ -18,7 +18,7 @@ class Restaurant extends Authenticatable
 
     public function getImagePathAttribute()
     {
-        return $this->image ? asset('files/companies/' . $this->image) : asset('images/default-user.jpg');
+        return $this->image ? asset('files/restaurants/' . $this->image) : asset('images/default-user.jpg');
     }
 
     public function isNotActive()

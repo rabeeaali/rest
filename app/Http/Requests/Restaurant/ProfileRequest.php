@@ -16,12 +16,9 @@ class ProfileRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255', Rule::unique('companies')->ignore(restaurant()->id)],
+            'email' => ['required', 'email', 'max:255', Rule::unique('restaurants')->ignore(restaurant()->id)],
             'password' => ['sometimes', 'nullable', 'string', 'min:6', 'max:255'],
             'image' => ['sometimes', 'nullable', 'file', 'mimes:png,jpg', 'max:2048'],
-            'city' => ['required', 'string', 'min:3', 'max:255'],
-            'website' => ['required', 'url', 'min:3', 'max:255'],
-            'bio' => ['nullable', 'string', 'min:3', 'max:3000'],
         ];
     }
 }
