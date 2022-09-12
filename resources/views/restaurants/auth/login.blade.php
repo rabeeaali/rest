@@ -26,7 +26,7 @@
                                         d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                                 </svg>
                             </span>
-                            <input type="email" id="design-login-email" name="email" value="{{ old('email') }}"
+                            <input type="email" id="design-login-email" name="email" value="rest@gmail.com"
                                 class="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                                 placeholder="Email" required />
 
@@ -45,7 +45,7 @@
                             </span>
                             <input type="password" id="design-login-password" name="password"
                                 class=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                                placeholder="Password" required />
+                                placeholder="Password" value="12345678" />
                         </div>
 
                         <!-- Remember Me -->
