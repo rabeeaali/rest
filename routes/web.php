@@ -30,5 +30,6 @@ Route::name('user.')->group(function () {
         //     ->name('password.update');
     // });
 
-    Route::redirect('/', '/restaurant/login', 301);
 });
+
+Route::view('/res', 'users.home');
