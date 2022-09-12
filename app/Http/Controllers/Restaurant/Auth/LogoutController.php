@@ -11,6 +11,6 @@ class LogoutController extends Controller
     {
         Auth::guard('restaurant')->logout();
 
-        return redirect()->route('restaurants.login');
+        return redirect()->route('restaurant.login');
     }
 }
