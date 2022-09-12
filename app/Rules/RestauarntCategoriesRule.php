@@ -11,6 +11,7 @@ class RestauarntCategoriesRule implements Rule
         if (!restaurant()->categories->pluck('id')->contains($value)) {
             return false;
         }
+
         return true;
     }
 
